@@ -7,8 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "export": "next export",
+    "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out",
     "lint": "next lint"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "autoprefixer": "^10.4.7",
     "axios": "^0.27.2",
     "framer-motion": "6",
+    "gh-pages": "^5.0.0",
     "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
