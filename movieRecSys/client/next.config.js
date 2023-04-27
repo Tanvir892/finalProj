@@ -1,9 +1,10 @@
-/** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: process.env.NODE_ENV === "production" ? "/finalProj" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/finalProj" : "",
+  basePath: isProd ? '/finalProj' : '',
+  assetPrefix: isProd ? '/finalProj/' : '',
 };
 
 module.exports = nextConfig;
